@@ -3,50 +3,124 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="theme-color"
-        content="#101827"
-    >
+<meta name="theme-color" content="#090f1e">
 
-    <meta
-        name="description"
-        content="LiveSim - Online Life Simulation Game"
-    >
+<meta name="description"
+content="LiveSim - Build your virtual life.">
 
-    <title>LiveSim - Virtual Life Simulation</title>
+<title>LiveSim — Virtual Society</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-    <header class="header">
+<div class="app-shell">
 
-        <div class="brand">
-            <div class="brand-icon">L</div>
-            <span>LiveSim</span>
-        </div>
+    <!-- HEADER -->
 
-        <div class="header-right">
+    <header class="topbar">
 
-            <span class="version">
-                v0.0.1
-            </span>
+        <a class="brand" href="/">
+
+            <svg
+                class="brand-logo"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+
+                <defs>
+
+                    <linearGradient
+                        id="logoGradient"
+                        x1="10"
+                        y1="10"
+                        x2="90"
+                        y2="90"
+                    >
+
+                        <stop stop-color="#64A5FF"/>
+
+                        <stop offset="1"
+                        stop-color="#42E8D5"/>
+
+                    </linearGradient>
+
+                </defs>
+
+                <rect
+                    x="5"
+                    y="5"
+                    width="90"
+                    height="90"
+                    rx="28"
+                    fill="url(#logoGradient)"
+                />
+
+                <path
+                    d="M30 27V73H70"
+                    stroke="#081526"
+                    stroke-width="11"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+
+                <circle
+                    cx="70"
+                    cy="27"
+                    r="8"
+                    fill="white"
+                />
+
+                <circle
+                    cx="70"
+                    cy="73"
+                    r="5"
+                    fill="#081526"
+                />
+
+            </svg>
+
+            <div class="brand-text">
+
+                <span class="brand-name">
+                    LiveSim
+                </span>
+
+                <span class="brand-subtitle">
+                    VIRTUAL SOCIETY
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <div class="topbar-actions">
+
+            <div class="version-badge">
+
+                <span class="version-dot"></span>
+
+                V0.0.1
+
+            </div>
 
             <button
                 id="themeButton"
-                class="theme-button"
-                aria-label="Ubah tema"
+                class="icon-button"
+                aria-label="Change theme"
             >
+
                 ☀
+
             </button>
 
         </div>
@@ -54,221 +128,370 @@
     </header>
 
 
+    <!-- MAIN -->
+
     <main>
+
+
+        <!-- HERO -->
 
         <section class="hero">
 
-            <div class="hero-label">
-                ONLINE LIFE SIMULATION
-            </div>
+            <div class="hero-content">
 
-            <h1>
-                Your Life.<br>
-                Your World.
-            </h1>
+                <div class="eyebrow">
 
-            <p class="hero-description">
+                    <span class="eyebrow-line"></span>
 
-                Bangun kehidupan virtualmu,
-                temukan keluarga, bangun karier,
-                dan ciptakan generasi berikutnya.
-
-            </p>
-
-            <div class="hero-status">
-
-                <span class="status-dot"></span>
-
-                <span>
-                    Persistent Virtual World
-                </span>
-
-            </div>
-
-        </section>
-
-
-        <section class="features">
-
-            <div class="section-heading">
-
-                <h2>Explore LiveSim</h2>
-
-                <p>
-                    Berbagai aspek kehidupan dalam satu dunia.
-                </p>
-
-            </div>
-
-
-            <div class="feature-grid">
-
-                <article class="feature-card">
-
-                    <div class="feature-icon">👤</div>
-
-                    <h3>Personal Life</h3>
-
-                    <p>
-                        Bangun identitas dan
-                        kembangkan kehidupan karaktermu.
-                    </p>
-
-                    <span class="feature-status">
-                        Planned
-                    </span>
-
-                </article>
-
-
-                <article class="feature-card">
-
-                    <div class="feature-icon">👨‍👩‍👧</div>
-
-                    <h3>Family System</h3>
-
-                    <p>
-                        Bentuk keluarga bersama
-                        pemain lainnya.
-                    </p>
-
-                    <span class="feature-status">
-                        Planned
-                    </span>
-
-                </article>
-
-
-                <article class="feature-card">
-
-                    <div class="feature-icon">💼</div>
-
-                    <h3>Career</h3>
-
-                    <p>
-                        Temukan pekerjaan dan
-                        kembangkan karier.
-                    </p>
-
-                    <span class="feature-status">
-                        Planned
-                    </span>
-
-                </article>
-
-
-                <article class="feature-card">
-
-                    <div class="feature-icon">💰</div>
-
-                    <h3>Economy</h3>
-
-                    <p>
-                        Bangun kekayaan melalui
-                        ekonomi virtual.
-                    </p>
-
-                    <span class="feature-status">
-                        Planned
-                    </span>
-
-                </article>
-
-
-                <article class="feature-card">
-
-                    <div class="feature-icon">🌍</div>
-
-                    <h3>Virtual Society</h3>
-
-                    <p>
-                        Berinteraksi dengan
-                        masyarakat multiplayer.
-                    </p>
-
-                    <span class="feature-status">
-                        Planned
-                    </span>
-
-                </article>
-
-
-                <article class="feature-card">
-
-                    <div class="feature-icon">🌳</div>
-
-                    <h3>Family Tree</h3>
-
-                    <p>
-                        Bangun silsilah keluarga
-                        hingga beberapa generasi.
-                    </p>
-
-                    <span class="feature-status">
-                        Planned
-                    </span>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <section class="development">
-
-            <div class="development-card">
-
-                <span class="development-label">
-                    DEVELOPMENT STATUS
-                </span>
-
-                <h2>
-                    LiveSim is being built.
-                </h2>
-
-                <p>
-                    Kami sedang membangun fondasi
-                    dunia virtual LiveSim.
-                </p>
-
-                <div class="progress-track">
-
-                    <div class="progress-fill"></div>
+                    THE NEXT GENERATION OF LIFE SIMULATION
 
                 </div>
 
-                <span class="progress-text">
-                    Foundation Development
-                </span>
+
+                <h1>
+
+                    Your Life.<br>
+
+                    <span>Your Universe.</span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Create your identity, build relationships,
+                    develop your career, and create a legacy
+                    in a persistent multiplayer world.
+
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <button
+                        class="primary-button"
+                        id="exploreButton"
+                    >
+
+                        Explore LiveSim
+
+                        <span>↗</span>
+
+                    </button>
+
+                    <div class="online-indicator">
+
+                        <span class="online-dot"></span>
+
+                        Persistent World
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VISUAL -->
+
+            <div class="hero-visual">
+
+                <div class="visual-glow"></div>
+
+                <div class="orbit orbit-one"></div>
+
+                <div class="orbit orbit-two"></div>
+
+
+                <div class="core-logo">
+
+                    <svg viewBox="0 0 100 100"
+                    fill="none">
+
+                        <path
+                            d="M28 25V75H72"
+                            stroke="url(#coreGradient)"
+                            stroke-width="12"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+
+                        <defs>
+
+                            <linearGradient
+                                id="coreGradient"
+                                x1="20"
+                                y1="20"
+                                x2="80"
+                                y2="80"
+                            >
+
+                                <stop stop-color="#65A5FF"/>
+
+                                <stop offset="1"
+                                stop-color="#42E8D5"/>
+
+                            </linearGradient>
+
+                        </defs>
+
+                    </svg>
+
+                </div>
+
+
+                <div class="floating-card card-one">
+
+                    <span>🌍</span>
+
+                    <div>
+
+                        <strong>Virtual World</strong>
+
+                        <small>Persistent Environment</small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card card-two">
+
+                    <span>👨‍👩‍👧</span>
+
+                    <div>
+
+                        <strong>Generations</strong>
+
+                        <small>Build Your Legacy</small>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
         </section>
+
+
+        <!-- STATUS -->
+
+        <section class="system-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        SYSTEM OVERVIEW
+                    </span>
+
+                    <h2>LiveSim Infrastructure</h2>
+
+                </div>
+
+                <div class="connection-badge">
+
+                    <span
+                        id="connectionDot"
+                        class="connection-dot"
+                    ></span>
+
+                    <span id="connectionText">
+                        Connecting...
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="system-grid">
+
+
+                <article class="system-card">
+
+                    <div class="system-icon">
+                        ◈
+                    </div>
+
+                    <h3>Player Identity</h3>
+
+                    <p>
+
+                        Your own identity,
+                        nationality, and character progression.
+
+                    </p>
+
+                    <span class="system-tag">
+                        CORE SYSTEM
+                    </span>
+
+                </article>
+
+
+                <article class="system-card">
+
+                    <div class="system-icon">
+                        ♧
+                    </div>
+
+                    <h3>Family Network</h3>
+
+                    <p>
+
+                        Build relationships and
+                        develop multiple generations.
+
+                    </p>
+
+                    <span class="system-tag">
+                        CORE SYSTEM
+                    </span>
+
+                </article>
+
+
+                <article class="system-card">
+
+                    <div class="system-icon">
+                        ◫
+                    </div>
+
+                    <h3>Career & Economy</h3>
+
+                    <p>
+
+                        Work, earn, develop skills,
+                        and build your virtual wealth.
+
+                    </p>
+
+                    <span class="system-tag">
+                        PLANNED
+                    </span>
+
+                </article>
+
+
+                <article class="system-card">
+
+                    <div class="system-icon">
+                        ◎
+                    </div>
+
+                    <h3>Multiplayer Society</h3>
+
+                    <p>
+
+                        Connect with other players
+                        in a shared virtual society.
+
+                    </p>
+
+                    <span class="system-tag">
+                        PLANNED
+                    </span>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- BACKEND -->
+
+        <section class="backend-section">
+
+            <div class="backend-card">
+
+                <div>
+
+                    <span class="section-label">
+                        BACKEND INFRASTRUCTURE
+                    </span>
+
+                    <h2>
+                        A persistent world.
+                        A connected life.
+                    </h2>
+
+                    <p>
+
+                        LiveSim is being built around
+                        persistent player data and
+                        secure multiplayer infrastructure.
+
+                    </p>
+
+                </div>
+
+
+                <div class="backend-visual">
+
+                    <div class="backend-node">
+                        CLIENT
+                    </div>
+
+                    <div class="backend-line"></div>
+
+                    <div class="backend-node active-node">
+                        DATABASE
+                    </div>
+
+                    <div class="backend-line"></div>
+
+                    <div class="backend-node">
+                        WORLD
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
 
     </main>
 
 
-    <footer>
+    <!-- FOOTER -->
+
+    <footer class="footer">
 
         <div class="footer-brand">
-            LiveSim
+
+            <strong>LiveSim</strong>
+
+            <span>Your Life. Your Universe.</span>
+
         </div>
 
-        <p>
-            Your Life. Your World.
-        </p>
 
-        <p class="copyright">
-            © 2026 LiveSim Project.
-            Version 0.0.1
-        </p>
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 LiveSim Project
+            </span>
+
+            <span>
+                Version 0.0.1
+            </span>
+
+        </div>
 
     </footer>
 
 
-    <script src="js/app.js"></script>
+</div>
+
+
+<script type="module" src="js/app.js"></script>
 
 </body>
 
-  </html>
+                        </html>
