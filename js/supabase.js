@@ -1,17 +1,19 @@
 // ==========================================
 // LIVESIM
-// SUPABASE CONNECTION
+// SUPABASE CLIENT
 // VERSION 0.0.1
 // ==========================================
 
 
 import {
+
     createClient
+
 } from "https://esm.sh/@supabase/supabase-js@2";
 
 
 // ==========================================
-// PROJECT CONFIGURATION
+// CONFIGURATION
 // ==========================================
 
 
@@ -26,7 +28,7 @@ const SUPABASE_PUBLISHABLE_KEY =
 
 
 // ==========================================
-// INITIALIZE CLIENT
+// AUTH CONFIGURATION
 // ==========================================
 
 
@@ -44,7 +46,9 @@ export const supabase = createClient(
 
             persistSession: true,
 
-            detectSessionInUrl: true
+            detectSessionInUrl: true,
+
+            flowType: "pkce"
 
         }
 
@@ -54,7 +58,7 @@ export const supabase = createClient(
 
 
 // ==========================================
-// EXPORT CONFIGURATION
+// PROJECT CONFIG
 // ==========================================
 
 
@@ -64,6 +68,10 @@ export const LiveSimConfig = {
 
     version: "0.0.1",
 
-    language: "id"
+    authDomain: "accounts.livesim.invalid",
+
+    defaultLanguage: "id",
+
+    defaultTheme: "dark"
 
 };
