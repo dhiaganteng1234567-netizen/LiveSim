@@ -8,490 +8,608 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#090f1e">
+<meta name="theme-color"
+content="#080D18">
+
+<title>LiveSim — Account Access</title>
 
 <meta name="description"
-content="LiveSim - Build your virtual life.">
+content="LiveSim Virtual Society">
 
-<title>LiveSim — Virtual Society</title>
-
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+href="css/style.css">
 
 </head>
 
 <body>
 
-<div class="app-shell">
+<div class="background-grid"></div>
 
-    <!-- HEADER -->
 
-    <header class="topbar">
+<!-- ==================================
+     HEADER
+================================== -->
 
-        <a class="brand" href="/">
+<header class="topbar">
 
-            <svg
-                class="brand-logo"
-                viewBox="0 0 100 100"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
+    <a class="brand" href="/">
 
-                <defs>
+        <div class="brand-logo">
 
-                    <linearGradient
-                        id="logoGradient"
-                        x1="10"
-                        y1="10"
-                        x2="90"
-                        y2="90"
-                    >
+            <svg viewBox="0 0 100 100"
+            fill="none">
 
-                        <stop stop-color="#64A5FF"/>
-
-                        <stop offset="1"
-                        stop-color="#42E8D5"/>
-
-                    </linearGradient>
-
-                </defs>
-
-                <rect
-                    x="5"
-                    y="5"
-                    width="90"
-                    height="90"
-                    rx="28"
-                    fill="url(#logoGradient)"
+                <path
+                d="M50 5L91 28V72L50 95L9 72V28L50 5Z"
+                stroke="#C6A45B"
+                stroke-width="3"
                 />
 
                 <path
-                    d="M30 27V73H70"
-                    stroke="#081526"
-                    stroke-width="11"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                d="M35 27V73H68"
+                stroke="#E1C783"
+                stroke-width="9"
+                stroke-linecap="square"
                 />
 
                 <circle
-                    cx="70"
-                    cy="27"
-                    r="8"
-                    fill="white"
-                />
-
-                <circle
-                    cx="70"
-                    cy="73"
-                    r="5"
-                    fill="#081526"
+                cx="68"
+                cy="27"
+                r="5"
+                fill="#E1C783"
                 />
 
             </svg>
 
-            <div class="brand-text">
+        </div>
 
-                <span class="brand-name">
-                    LiveSim
-                </span>
 
-                <span class="brand-subtitle">
-                    VIRTUAL SOCIETY
-                </span>
+        <div class="brand-info">
+
+            <strong>LiveSim</strong>
+
+            <span>VIRTUAL SOCIETY</span>
+
+        </div>
+
+    </a>
+
+
+    <div class="header-right">
+
+        <span class="version">
+            VERSION 0.0.1
+        </span>
+
+        <button
+        id="themeButton"
+        class="theme-button"
+        aria-label="Change theme">
+
+            ◐
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================================
+     MAIN
+================================== -->
+
+<main class="main-layout">
+
+
+    <!-- LEFT PANEL -->
+
+    <section class="intro-panel">
+
+        <div class="intro-top">
+
+            <div class="status-label">
+
+                <span class="status-indicator"></span>
+
+                PERSISTENT MULTIPLAYER WORLD
 
             </div>
 
-        </a>
+
+            <h1>
+
+                A World.<br>
+
+                <span>A Life.</span><br>
+
+                Your Legacy.
+
+            </h1>
 
 
-        <div class="topbar-actions">
+            <p class="intro-description">
 
-            <div class="version-badge">
+                Enter a persistent virtual society.
+                Create your identity, establish
+                relationships, develop your career,
+                and build a legacy across generations.
 
-                <span class="version-dot"></span>
+            </p>
 
-                V0.0.1
+        </div>
+
+
+        <div class="world-visual">
+
+            <div class="world-circle circle-one"></div>
+
+            <div class="world-circle circle-two"></div>
+
+            <div class="world-circle circle-three"></div>
+
+
+            <div class="world-core">
+
+                <svg viewBox="0 0 100 100"
+                fill="none">
+
+                    <path
+                    d="M32 24V76H70"
+                    stroke="#E1C783"
+                    stroke-width="10"
+                    stroke-linecap="square"
+                    />
+
+                </svg>
 
             </div>
+
+
+            <div class="world-caption">
+
+                <span>THE LIVESIM PROJECT</span>
+
+                <strong>BUILD YOUR OWN STORY</strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="intro-footer">
+
+            <div>
+
+                <strong>01</strong>
+
+                <span>IDENTITY</span>
+
+            </div>
+
+            <div>
+
+                <strong>02</strong>
+
+                <span>FAMILY</span>
+
+            </div>
+
+            <div>
+
+                <strong>03</strong>
+
+                <span>LEGACY</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RIGHT PANEL -->
+
+    <section class="auth-panel">
+
+
+        <!-- AUTH HEADER -->
+
+        <div class="auth-heading">
+
+            <span class="section-label">
+                PLAYER ACCOUNT
+            </span>
+
+            <h2 id="formTitle">
+                Welcome Back
+            </h2>
+
+            <p id="formDescription">
+
+                Access your LiveSim account.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- FORM SWITCH -->
+
+        <div class="auth-tabs">
 
             <button
-                id="themeButton"
-                class="icon-button"
-                aria-label="Change theme"
-            >
+            class="auth-tab active"
+            id="loginTab"
+            type="button">
 
-                ☀
+                SIGN IN
+
+            </button>
+
+
+            <button
+            class="auth-tab"
+            id="registerTab"
+            type="button">
+
+                CREATE ACCOUNT
 
             </button>
 
         </div>
 
-    </header>
 
 
-    <!-- MAIN -->
+        <!-- LOGIN FORM -->
 
-    <main>
+        <form id="loginForm">
+
+            <div class="field-group">
+
+                <label for="loginUsername">
+                    USERNAME
+                </label>
+
+                <input
+                id="loginUsername"
+                type="text"
+                placeholder="Enter your username"
+                maxlength="20"
+                autocomplete="username"
+                required>
+
+            </div>
 
 
-        <!-- HERO -->
+            <div class="field-group">
 
-        <section class="hero">
+                <label for="loginPassword">
+                    PASSWORD
+                </label>
 
-            <div class="hero-content">
+                <input
+                id="loginPassword"
+                type="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required>
 
-                <div class="eyebrow">
+            </div>
 
-                    <span class="eyebrow-line"></span>
 
-                    THE NEXT GENERATION OF LIFE SIMULATION
+            <button
+            type="submit"
+            class="submit-button"
+            id="loginButton">
+
+                <span>ENTER LIVESIM</span>
+
+                <span class="button-arrow">→</span>
+
+            </button>
+
+
+            <p class="form-note">
+
+                Your account is protected by
+                Supabase Authentication.
+
+            </p>
+
+        </form>
+
+
+
+        <!-- REGISTER FORM -->
+
+        <form id="registerForm" hidden>
+
+
+            <div class="field-group">
+
+                <label for="registerUsername">
+                    USERNAME
+                </label>
+
+                <input
+                id="registerUsername"
+                type="text"
+                placeholder="Choose a username"
+                minlength="3"
+                maxlength="20"
+                autocomplete="username"
+                required>
+
+                <small>
+                    3–20 characters. Letters,
+                    numbers and underscores.
+                </small>
+
+            </div>
+
+
+
+            <div class="field-row">
+
+                <div class="field-group">
+
+                    <label for="registerGender">
+                        GENDER
+                    </label>
+
+                    <select
+                    id="registerGender"
+                    required>
+
+                        <option value="">
+                            Select
+                        </option>
+
+                        <option value="male">
+                            Male
+                        </option>
+
+                        <option value="female">
+                            Female
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                        <option value="prefer_not_to_say">
+                            Prefer not to say
+                        </option>
+
+                    </select>
 
                 </div>
 
 
-                <h1>
+                <div class="field-group">
 
-                    Your Life.<br>
+                    <label for="registerNationality">
+                        NATIONALITY
+                    </label>
 
-                    <span>Your Universe.</span>
+                    <select
+                    id="registerNationality"
+                    required>
 
-                </h1>
+                        <option value="">
+                            Select country
+                        </option>
 
-
-                <p class="hero-description">
-
-                    Create your identity, build relationships,
-                    develop your career, and create a legacy
-                    in a persistent multiplayer world.
-
-                </p>
-
-
-                <div class="hero-actions">
-
-                    <button
-                        class="primary-button"
-                        id="exploreButton"
-                    >
-
-                        Explore LiveSim
-
-                        <span>↗</span>
-
-                    </button>
-
-                    <div class="online-indicator">
-
-                        <span class="online-dot"></span>
-
-                        Persistent World
-
-                    </div>
+                    </select>
 
                 </div>
 
             </div>
 
 
-            <!-- VISUAL -->
 
-            <div class="hero-visual">
+            <div class="field-group">
 
-                <div class="visual-glow"></div>
+                <label for="registerAgeBand">
+                    REAL AGE GROUP
+                </label>
 
-                <div class="orbit orbit-one"></div>
+                <select
+                id="registerAgeBand"
+                required>
 
-                <div class="orbit orbit-two"></div>
+                    <option value="">
+                        Select age group
+                    </option>
 
+                    <option value="13_15">
+                        13–15 years
+                    </option>
 
-                <div class="core-logo">
+                    <option value="16_17">
+                        16–17 years
+                    </option>
 
-                    <svg viewBox="0 0 100 100"
-                    fill="none">
+                    <option value="18_plus">
+                        18 years and above
+                    </option>
 
-                        <path
-                            d="M28 25V75H72"
-                            stroke="url(#coreGradient)"
-                            stroke-width="12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
+                </select>
 
-                        <defs>
-
-                            <linearGradient
-                                id="coreGradient"
-                                x1="20"
-                                y1="20"
-                                x2="80"
-                                y2="80"
-                            >
-
-                                <stop stop-color="#65A5FF"/>
-
-                                <stop offset="1"
-                                stop-color="#42E8D5"/>
-
-                            </linearGradient>
-
-                        </defs>
-
-                    </svg>
-
-                </div>
-
-
-                <div class="floating-card card-one">
-
-                    <span>🌍</span>
-
-                    <div>
-
-                        <strong>Virtual World</strong>
-
-                        <small>Persistent Environment</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="floating-card card-two">
-
-                    <span>👨‍👩‍👧</span>
-
-                    <div>
-
-                        <strong>Generations</strong>
-
-                        <small>Build Your Legacy</small>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- STATUS -->
-
-        <section class="system-section">
-
-            <div class="section-heading">
-
-                <div>
-
-                    <span class="section-label">
-                        SYSTEM OVERVIEW
-                    </span>
-
-                    <h2>LiveSim Infrastructure</h2>
-
-                </div>
-
-                <div class="connection-badge">
-
-                    <span
-                        id="connectionDot"
-                        class="connection-dot"
-                    ></span>
-
-                    <span id="connectionText">
-                        Connecting...
-                    </span>
-
-                </div>
+                <small>
+                    This information is private and
+                    is separate from your virtual character age.
+                </small>
 
             </div>
 
 
-            <div class="system-grid">
 
+            <div class="field-group">
 
-                <article class="system-card">
+                <label for="registerPassword">
+                    PASSWORD
+                </label>
 
-                    <div class="system-icon">
-                        ◈
-                    </div>
-
-                    <h3>Player Identity</h3>
-
-                    <p>
-
-                        Your own identity,
-                        nationality, and character progression.
-
-                    </p>
-
-                    <span class="system-tag">
-                        CORE SYSTEM
-                    </span>
-
-                </article>
-
-
-                <article class="system-card">
-
-                    <div class="system-icon">
-                        ♧
-                    </div>
-
-                    <h3>Family Network</h3>
-
-                    <p>
-
-                        Build relationships and
-                        develop multiple generations.
-
-                    </p>
-
-                    <span class="system-tag">
-                        CORE SYSTEM
-                    </span>
-
-                </article>
-
-
-                <article class="system-card">
-
-                    <div class="system-icon">
-                        ◫
-                    </div>
-
-                    <h3>Career & Economy</h3>
-
-                    <p>
-
-                        Work, earn, develop skills,
-                        and build your virtual wealth.
-
-                    </p>
-
-                    <span class="system-tag">
-                        PLANNED
-                    </span>
-
-                </article>
-
-
-                <article class="system-card">
-
-                    <div class="system-icon">
-                        ◎
-                    </div>
-
-                    <h3>Multiplayer Society</h3>
-
-                    <p>
-
-                        Connect with other players
-                        in a shared virtual society.
-
-                    </p>
-
-                    <span class="system-tag">
-                        PLANNED
-                    </span>
-
-                </article>
-
+                <input
+                id="registerPassword"
+                type="password"
+                placeholder="Create a strong password"
+                minlength="10"
+                autocomplete="new-password"
+                required>
 
             </div>
 
-        </section>
 
 
-        <!-- BACKEND -->
+            <div class="field-group">
 
-        <section class="backend-section">
+                <label for="confirmPassword">
+                    CONFIRM PASSWORD
+                </label>
 
-            <div class="backend-card">
-
-                <div>
-
-                    <span class="section-label">
-                        BACKEND INFRASTRUCTURE
-                    </span>
-
-                    <h2>
-                        A persistent world.
-                        A connected life.
-                    </h2>
-
-                    <p>
-
-                        LiveSim is being built around
-                        persistent player data and
-                        secure multiplayer infrastructure.
-
-                    </p>
-
-                </div>
-
-
-                <div class="backend-visual">
-
-                    <div class="backend-node">
-                        CLIENT
-                    </div>
-
-                    <div class="backend-line"></div>
-
-                    <div class="backend-node active-node">
-                        DATABASE
-                    </div>
-
-                    <div class="backend-line"></div>
-
-                    <div class="backend-node">
-                        WORLD
-                    </div>
-
-                </div>
+                <input
+                id="confirmPassword"
+                type="password"
+                placeholder="Repeat your password"
+                minlength="10"
+                autocomplete="new-password"
+                required>
 
             </div>
 
-        </section>
 
 
-    </main>
+            <label class="agreement">
+
+                <input
+                type="checkbox"
+                id="termsAgreement"
+                required>
+
+                <span>
+
+                    I agree to the
+                    <a href="#legal">Terms of Service</a>
+                    and
+                    <a href="#legal">Privacy Policy</a>.
+
+                </span>
+
+            </label>
 
 
-    <!-- FOOTER -->
 
-    <footer class="footer">
+            <button
+            type="submit"
+            class="submit-button"
+            id="registerButton">
 
-        <div class="footer-brand">
+                <span>CREATE YOUR ACCOUNT</span>
 
-            <strong>LiveSim</strong>
+                <span class="button-arrow">→</span>
 
-            <span>Your Life. Your Universe.</span>
+            </button>
+
+
+            <p class="form-note">
+
+                No email verification required.
+
+            </p>
+
+        </form>
+
+
+
+        <!-- STATUS MESSAGE -->
+
+        <div
+        id="statusMessage"
+        class="status-message"
+        role="status"
+        aria-live="polite"
+        hidden>
 
         </div>
 
 
-        <div class="footer-bottom">
 
-            <span>
-                © 2026 LiveSim Project
+        <!-- SESSION PANEL -->
+
+        <div
+        id="sessionPanel"
+        class="session-panel"
+        hidden>
+
+            <span class="section-label">
+                ACTIVE SESSION
             </span>
 
-            <span>
-                Version 0.0.1
-            </span>
+            <h3 id="sessionUsername">
+                Player
+            </h3>
+
+            <p>
+                Your LiveSim account is connected.
+            </p>
+
+            <button
+            id="logoutButton"
+            class="logout-button"
+            type="button">
+
+                SIGN OUT
+
+            </button>
 
         </div>
 
-    </footer>
+
+    </section>
+
+</main>
 
 
-</div>
+
+<!-- ==================================
+     FOOTER
+================================== -->
+
+<footer class="footer">
+
+    <div>
+
+        <strong>LiveSim</strong>
+
+        <span>YOUR LIFE. YOUR UNIVERSE.</span>
+
+    </div>
 
 
-<script type="module" src="js/app.js"></script>
+    <p>
+
+        © 2026 LiveSim Project
+
+        <span>VERSION 0.0.1</span>
+
+    </p>
+
+</footer>
+
+
+
+<script
+type="module"
+src="js/app.js">
+</script>
+
 
 </body>
 
-                        </html>
+    </html>
